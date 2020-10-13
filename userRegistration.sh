@@ -1,15 +1,15 @@
 #!/bin/bash -x
 
-#program to validate First Name of user
+#program to validate Last Name of user
 
-echo "First Name should Start with Capital and has minimum 3 characters ";
-read -p "Enter First Name Of User" firstname;
+echo "Last Name should Start with Capital and has minimum 3 characters ";
+read -p "Enter Last Name Of User" lastName;
 
 pat="^[A-Z]{3,}";
 
-if [[ $firstname =~ $pat ]]
+if [[ $lastName =~ $pat ]]
 then
-	echo $firstname " is valid ";
+	echo $lastName " is valid ";
 else
-	echo $firstname " is invalid ";
+	echo $lastName " is invalid ";
 fi
