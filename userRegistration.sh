@@ -1,15 +1,12 @@
 #!/bin/bash -x
 
-#program to validate Last Name of user
+read -p "Enter Email Id : " email;
 
-echo "Last Name should Start with Capital and has minimum 3 characters ";
-read -p "Enter Last Name Of User" lastName;
+emailPattern="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)?@[0-9a-zA-Z]+.[a-zA-z]{2,4}([.][a-zA-z]{2})?"
 
-pat="^[A-Z]{3,}";
-
-if [[ $lastName =~ $pat ]]
+if [[ $email =~ $emailPattern ]]
 then
-	echo $lastName " is valid ";
+	echo $email" is valid";
 else
-	echo $lastName " is invalid ";
+	echo $email" is invalid"
 fi
