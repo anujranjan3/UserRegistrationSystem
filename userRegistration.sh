@@ -1,12 +1,13 @@
 #!/bin/bash -x
 
-read -p "Enter Mobile Number in given format (E.g. 91 9919819801) " number;
+echo "Password Should contain Minimum 8 characters "
+read -p "Enter Password " password;
 
-pat="^[0-9]{2}[[:space:]][0-9]{10}$"
+pat="^[0-9a-zA-Z]{8,}"
 
-if [[ $number =~ $pat ]]
+if [[ $password =~ $pat ]]
 then
-	echo $number" is valid";
+	echo $password" is valid";
 else
-	echo $number" is invalid"
+	echo $password" is invalid"
 fi
