@@ -1,9 +1,9 @@
 #!/bin/bash -x
 
-echo "Password Should contain Minimum 8 characters "
+echo "Password Should contain Minimum 8 characters and at leat one upper case "
 read -p "Enter Password " password;
 
-pat="^[0-9a-zA-Z]{8,}"
+pat="[A-Z0-9]{8,}"
 
 if [[ $password =~ $pat ]]
 then
